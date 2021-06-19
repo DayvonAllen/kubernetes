@@ -25,6 +25,10 @@ spec:
             - containerPort: 5432
           env:
             - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  kay: PGPASSWORD
           # how the storage should be used in this pod(or container(s))
           volumeMounts:
               # name must match the volume's name
