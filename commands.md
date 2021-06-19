@@ -15,6 +15,9 @@
     - You can change that configuration
     - If you are using Google Cloud, `Google Cloud Persistent Disk` will be used to store data for persistent volumes by default.
     - If you are using AWS, `AWS Block Store` will be used to store data for persistent volumes by default.
+  - `kubectl get pv` - gets all persistent volumes.
+  - `kubectl get pvc` - gets all persistent volume claims.
+  - `kubectl get secrets`
 - `kubectl describe <type> <name>` - get detailed info about an object
 - `kubectl delete -f <path to config file>` - delete object.
   - `kubectl delete pod <pod name>`
@@ -25,4 +28,9 @@
 - `kubectl <docker-command...> <pod name>` - you can run certain docker commands using kubectl for its pods that it controls.
   - `kubectl exec -it client-pod --  bash`
   - `kubectl logs client-pod`
+- `kubectl create secret generic <secret_name(can reference later in pod config)> --from-literal key=value` - creates a secret 
+  - Types of secrets:
+    - generic
+    - docker-registry(private images stored on docker hub)
+    - tls
 ---

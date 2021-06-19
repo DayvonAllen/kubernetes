@@ -9,7 +9,8 @@
     - Replica Controller
     - Pod
     - Service
-    - PersistentVolumeClai,
+    - PersistentVolumeClaim
+    - Secret - securely stores a piece of information in the cluster, such as a DB password
 - The master controls your whole kubernetes cluster.
 - `volume`(kubernetes) - an object that allows a container to store data at the pod level(not good for databases because data is typed to a pod).
   - `volume`(generic container meaning) - Some type of mechanism that allows a container to access a filesystem ouside of itself.
