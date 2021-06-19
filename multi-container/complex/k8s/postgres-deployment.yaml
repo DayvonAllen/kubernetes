@@ -28,7 +28,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: pgpassword
-                  kay: PGPASSWORD
+                  key: PGPASSWORD
           # how the storage should be used in this pod(or container(s))
           volumeMounts:
               # name must match the volume's name
