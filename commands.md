@@ -9,4 +9,7 @@
   - `kubectl get deployments`
 - `kubectl describe <type> <name>` - get detailed info about an object
 - `kubectl delete -f <path to config file>` - delete object.
+- `kubectl set <property> <object_type> / <object_name> <container_name> = <new image to use>` - imperative command to update a property.
+  - `kubectl set image <object_type> / <object_name> <container_name>  = <new image to use>` - imperative command to update an image.
+
 ---
