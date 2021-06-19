@@ -1,0 +1,15 @@
+# Limits the type of objects that we can create in any given file.
+# Each API version defines a different set of 'objects' we can use
+apiVersion: v1
+# The type of object we want to make
+kind: Service
+metadata:
+  name: client-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 3050
+      targetPort: 3000
+      nodePort: 31515
+  selector:
+    component: web
