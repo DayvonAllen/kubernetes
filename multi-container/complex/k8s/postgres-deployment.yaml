@@ -12,8 +12,23 @@ spec:
       labels:
         component: postgres
     spec:
+    # lets kubernetes know that this pod need some type of long term storage and it should create that storage based off of the PersistentVolumeClaim
+    # configuration file named "database-persistent-volume-claim"
+      volumes:
+        - name: postgres-storage
+          persistentVolumeClaim:
+            claimName: database-persistent-volume-claim
       containers:
         - name: postgres
           image: postgres
           ports:
             - containerPort: 5432
+          # how the storage should be used in this pod(or container(s))
+          volumeMounts:
+              # name must match the volume's name
+            - name: postgres-storage
+              # where this storage should be made available, we will designate the path that postgres uses to store data on the hard drive
+              # We want to backup all the data that postgres is storing on the hard drive
+              mountPath:  /var/lib/postgresql/data
+              # special option only for postgres(not required for other DBs)
+              subPath: postgres

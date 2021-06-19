@@ -9,7 +9,16 @@
     - Replica Controller
     - Pod
     - Service
+    - PersistentVolumeClai,
 - The master controls your whole kubernetes cluster.
+- `volume`(kubernetes) - an object that allows a container to store data at the pod level(not good for databases because data is typed to a pod).
+  - `volume`(generic container meaning) - Some type of mechanism that allows a container to access a filesystem ouside of itself.
+- `Persistent Volume` - Long term durable storage that is not tied to any particular pod or container. Will exist forever if you don't delete it(good for DBs)
+- `Persistant Volume Claim` - A specification of storage options, which says here are the options that you have available for storage in this particular cluster, it gets attached to a pod config. The actual storage(persistent volume) is created or fetched(if already exists) based on this claim by kubernetes. 
+  - We write in special config files the different persitent volume claims(specified amount of memory options) that are going to be available in our cluster.
+  - In our Kubernetes cluster we might have some amount of persistent volumes that were created ahead of time that our pods can request access to.
+  - Any persistent volume created ahead of time is called a `statically provisioned persistent volume`.
+  - `Dynamically provisioned persistent volume` - is created on the fly when a pod specifically asks for it and is attached to that pod.
 ---
 
 ## Pod
@@ -36,6 +45,12 @@
 - Good for development
 - Good for production
 - Deployment contains pod templates which is pretty much a blueprint of how every pod created by it should look.
+---
+
+## Access Modes
+- `ReadWriteOnce` - can be used by a single node
+- `ReadOnlyMany` - multiple nodes can read from this
+- `ReadWriteMany` - can be read and written to by many nodes
 ---
 
 ## Inside A Node

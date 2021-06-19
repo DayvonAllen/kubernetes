@@ -10,6 +10,11 @@
 - `kubectl get pods` - prints the status of all running pods. `get` means we want to retrieve information about a running object.
   - `kubectl get services`
   - `kubectl get deployments`
+  - `kubectl get storageclass` - gets all the options that kubernetes has for creating a persistent volume.
+    - The standard option(default) is by making a slice of space on the hard drive that kubernetes is running on.
+    - You can change that configuration
+    - If you are using Google Cloud, `Google Cloud Persistent Disk` will be used to store data for persistent volumes by default.
+    - If you are using AWS, `AWS Block Store` will be used to store data for persistent volumes by default.
 - `kubectl describe <type> <name>` - get detailed info about an object
 - `kubectl delete -f <path to config file>` - delete object.
   - `kubectl delete pod <pod name>`
