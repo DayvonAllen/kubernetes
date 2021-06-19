@@ -35,8 +35,8 @@
 - Subtypes of services:
   - `ClusterIP` - Exposes a set of pods to other objects in the cluster. Traffic from outside the cluster is not allowed.
   - `NodePort` - Exposes a container to the outside world(only good for dev purposes)
-  - `LoadBalancer`
-  - `Ingress`
+  - `LoadBalancer` - legacy way of getting network traffic into a cluster
+  - `Ingress` - exposes a set of services to the outside world.
 ---
 
 ## Deployment
