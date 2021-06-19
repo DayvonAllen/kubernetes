@@ -2,14 +2,22 @@
 - `minikube start` - start a kubernetes cluster in development.
 - `minikube stop`
 - `minikube ip` - get minikube's IP address.
+- `eval $(minikube docker-env)` - allows you to configure docker to point to minikube's docker containers instead of your local docker containers
 - `kubectl` - allows you to interact with nodes(virtual machines) in your cluster.
 - `kubectl apply -f <path and filename>` - feed a config file to `kubectl`. `-f` means you want to specify a file. `apply` means we want to change the configuration of our cluster.
+  - `kubectl apply -f k8s` - if you have a "k8s" folder it will apply all the configuration that is specified in there.
+  - `kubectl apply -f ./myconfig-pod.yaml` - individual config.
 - `kubectl get pods` - prints the status of all running pods. `get` means we want to retrieve information about a running object.
   - `kubectl get services`
   - `kubectl get deployments`
 - `kubectl describe <type> <name>` - get detailed info about an object
 - `kubectl delete -f <path to config file>` - delete object.
-- `kubectl set <property> <object_type> / <object_name> <container_name> = <new image to use>` - imperative command to update a property.
-  - `kubectl set image <object_type> / <object_name> <container_name>  = <new image to use>` - imperative command to update an image.
-
+  - `kubectl delete pod <pod name>`
+  - `kubectl delete service <service name>`
+  - `kubectl deployment pod <pod name>`
+- `kubectl set <property> <object_type>/<object_name> <container_name>=<new image to use>` - imperative command to update a property.
+  - `kubectl set image <object_type>/<object_name> <container_name>=<new image to use>` - imperative command to update an image.
+- `kubectl <docker-command...> <pod name>` - you can run certain docker commands using kubectl for its pods that it controls.
+  - `kubectl exec -it client-pod --  bash`
+  - `kubectl logs client-pod`
 ---

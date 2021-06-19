@@ -13,7 +13,7 @@
 ---
 
 ## Pod
-- A grouping of containers with a very common purpose.
+- Runs one or more containers with a very common purpose.
 - They are inside of nodes.
 - The smallest thing that we can deploy to run a single container is a pod.
 - We must run one or more containers in a pod.
@@ -23,7 +23,7 @@
 ## Service
 - Sets up networking in a kubernetes cluster.
 - Subtypes of services:
-  - `ClusterIP`
+  - `ClusterIP` - Exposes a set of pods to other objects in the cluster. Traffic from outside the cluster is not allowed.
   - `NodePort` - Exposes a container to the outside world(only good for dev purposes)
   - `LoadBalancer`
   - `Ingress`
