@@ -78,6 +78,7 @@
 
 ## Helm
 - Allows you to use third party software in your kubernetes cluster.
+- Makes changes to the configuration of your cluster.
 - consists of the helm client and tiller server
 ---
 
