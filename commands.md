@@ -3,6 +3,7 @@
 - `minikube stop`
 - `minikube delete` - deletes your cluster
 - `minikube ip` - get minikube's IP address.
+- `minikube dashboard` - opens a webpage in your browser with information about your cluster.
 - `eval $(minikube docker-env)` - allows you to configure docker to point to minikube's docker containers instead of your local docker containers
 - `kubectl` - allows you to interact with nodes(virtual machines) in your cluster.
 - `kubectl apply -f <path and filename>` - feed a config file to `kubectl`. `-f` means you want to specify a file. `apply` means we want to change the configuration of our cluster.

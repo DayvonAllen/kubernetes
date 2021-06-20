@@ -4,7 +4,7 @@
     - `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.47.0/deploy/static/provider/cloud/deploy.yaml`
   - minikube:
     - `minikube addons enable ingress`
-  - microk8s:
+  - microk8s(if installed):
     - `microk8s enable ingress`
 ---
 
