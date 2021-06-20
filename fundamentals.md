@@ -11,6 +11,7 @@
     - Service
     - PersistentVolumeClaim
     - Secret - securely stores a piece of information in the cluster, such as a DB password
+    - ConfigMap - hold some amount of configuration that can be used throughout our cluster.
 - The master controls your whole kubernetes cluster.
 - `volume`(kubernetes) - an object that allows a container to store data at the pod level(not good for databases because data is typed to a pod).
   - `volume`(generic container meaning) - Some type of mechanism that allows a container to access a filesystem ouside of itself.
@@ -46,6 +47,19 @@
 - Good for development
 - Good for production
 - Deployment contains pod templates which is pretty much a blueprint of how every pod created by it should look.
+---
+
+## Ingress
+- Ingress controller - watches for changes to the ingress and updates the thing that handles traffic.
+- Ingress config - An object that has a set of configuration rules describing how traffic should be routed.
+---
+
+## Controller
+- A controller is any object that constantly works to make our desired state a reality
+- Controller examples:
+  - Ingress - creates a pod that is running nginx that handles routing. 
+  - Deployment
+- It looks at the current state of our cluster and our desired state(config files) and tries to make the current state match our desired state.
 ---
 
 ## Access Modes

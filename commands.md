@@ -1,6 +1,7 @@
 ## Command
 - `minikube start` - start a kubernetes cluster in development.
 - `minikube stop`
+- `minikube delete` - deletes your cluster
 - `minikube ip` - get minikube's IP address.
 - `eval $(minikube docker-env)` - allows you to configure docker to point to minikube's docker containers instead of your local docker containers
 - `kubectl` - allows you to interact with nodes(virtual machines) in your cluster.
