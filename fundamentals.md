@@ -76,6 +76,11 @@
 - `label - selector` system - it allows a service to know how to set up networking for a pod by using `selector` with the pod's label.
 ---
 
+## Helm
+- Allows you to use third party software in your kubernetes cluster.
+- consists of the helm client and tiller server
+---
+
 ## Kubernetes Important Points
 - Kubernetes is a system to deploy containerized apps
 - Nodes are individual machines(or vm's) that run containers
